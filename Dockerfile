@@ -1,26 +1,34 @@
-# Use the official Python lightweight image (not Lambda)
+# Use the "slim" variant to keep the image small (approx. 150MB vs 1GB+)
 FROM python:3.12-slim
 
-# Set working directory
+# Prevent Python from writing .pyc files and buffering stdout
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies (if needed) and uv
-RUN pip install uv
+# Install system dependencies
+# We add 'rm -rf' at the end to keep the layer small
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy dependency files first (for caching)
+# Copy only the requirements first
+# This leverages Docker caching: if requirements don't change, 
+# this step is skipped on re-builds
 COPY requirements.txt .
 
-# Install dependencies
-RUN uv pip install --system -r requirements.txt
+# Install Python dependencies
+# --no-cache-dir reduces size by not saving the downloaded wheel files
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application
-COPY agent/ ./agent/
-COPY dashboard.py .
-# We don't need lambda_function.py anymore for this deployment
+# Copy the rest of the application code
+COPY . .
 
-# Expose Gradio's port
+# Expose the port Gradio uses
 EXPOSE 7860
 
-# Set the command to run the dashboard
-# host="0.0.0.0" is CRITICAL for running inside Docker
+# Run the dashboard
 CMD ["python", "dashboard.py"]

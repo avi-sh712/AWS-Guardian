@@ -128,6 +128,5 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         fn=on_deny,
         outputs=[log_box, status_box, approve_btn, deny_btn]
     )
-
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    demo.launch(server_name="0.0.0.0", server_port=7860, auth=("admin", "Guardianisthicc696988#"))
