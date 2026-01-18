@@ -1,6 +1,9 @@
-langgraph
+gradio
+langchain
 langchain-openai
-langchain-core
+langchain-community
+langgraph
 boto3
-mcp
-langchain-mcp-adapters
+python-dotenv
+openai
+pydantic
