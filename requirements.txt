@@ -1,0 +1,6 @@
+langgraph
+langchain-openai
+langchain-core
+boto3
+mcp
+langchain-mcp-adapters
