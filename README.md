@@ -12,9 +12,12 @@
 
 ## 🎥 Demo
 
-**[Watch the 60-Second Walkthrough Video Here]** *(Replace this with your Loom link)*
+**[Watch the 60-Second Walkthrough Video Here]** *((https://www.loom.com/share/a793e96739e44474978dbc55597c32f2))*
 
 ![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Guardian+Dashboard+Preview)
+<img width="1919" height="761" alt="image" src="https://github.com/user-attachments/assets/3a661544-ef42-4f78-82f6-7c2015bc75a1" />
+<img width="1894" height="848" alt="image" src="https://github.com/user-attachments/assets/0d14b51f-4272-4dbd-b933-2158f0e63238" />
+<img width="1894" height="850" alt="image" src="https://github.com/user-attachments/assets/c191dca7-812f-4932-8b88-337811e5f6a7" />
 
 *(The agent detecting a public S3 bucket and requesting permission to fix it.)*
 
