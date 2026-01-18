@@ -1,4 +1,6 @@
 # AWS Sentinel Agent 🛡️
+<img width="1773" height="575" alt="image" src="https://github.com/user-attachments/assets/6cc501de-bb0f-490e-afb9-3f0d72a013ad" />
+<img width="1778" height="624" alt="image" src="https://github.com/user-attachments/assets/98b29e45-699d-4a31-8304-72db119583f7" />
 
 A secure, autonomous agent that audits AWS infrastructure for security misconfigurations. It features a **Human-in-the-Loop (HITL)** approval workflow to prevent unauthorized changes and uses the **Model Context Protocol (MCP)** to standardize tool execution.
 
