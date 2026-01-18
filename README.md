@@ -1,4 +1,4 @@
-# 🛡️ Sentinel: Autonomous Cloud Security Agent
+# 🛡️ Guardian: Autonomous Cloud Security Agent
 
 > **An intelligent, human-in-the-loop AI agent that audits, detects, and actively remediates AWS cloud security vulnerabilities using the Model Context Protocol (MCP).**
 
