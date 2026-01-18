@@ -143,7 +143,7 @@ Currently, Guardian is a high-security internal tool. The roadmap focuses on sca
 
 - [ ] **Infrastructure as Code (IaC):** Automate the EC2 and IAM provisioning using Terraform or AWS CDK
 - [ ] **Multi-Tenancy:** Implement a PostgreSQL database to support multiple user accounts and audit logs
-- [ ] **RAG Integration:** Add a "Knowledge Base" feature where the Agent can read AWS Documentation (via RAG) to explain why a vulnerability is dangerous
+- [ ] **RAG Integration:** Add a "Knowledge Base" feature where the Agent can read AWS Documentation and company policies (via RAG) to explain why a vulnerability is dangerous or why it doesn't align with the company's architecture
 - [ ] **Push Notifications:** Integrate with Slack/Discord Webhooks for real-time alerting
 
 ---
