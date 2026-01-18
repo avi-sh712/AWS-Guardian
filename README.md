@@ -13,14 +13,14 @@
 ## 🎥 Demo
 **[Watch the 60-Second Walkthrough Video Here]** *(Add your Loom link here)*
 
-![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Sentinel+Dashboard+Preview)
+![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Guardian+Dashboard+Preview)
 *(The agent detecting a public S3 bucket and requesting permission to fix it.)*
 
 ---
 
 ## 🚀 Overview
 
-Sentinel is a next-generation **Agentic Security System** built on the **Model Context Protocol (MCP)**. Unlike traditional scripts that hardcode API calls, Sentinel decouples the "Brain" (AI) from the "Tools" (AWS).
+Guardian is a next-generation **Agentic Security System** built on the **Model Context Protocol (MCP)**. Unlike traditional scripts that hardcode API calls, Guardian decouples the "Brain" (AI) from the "Tools" (AWS).
 
 It connects to a dedicated **AWS MCP Server**, identifies high-risk misconfigurations (e.g., Public S3 Buckets, Unused EC2 Instances), and engages in a **Human-in-the-Loop** workflow to fix them.
 
@@ -35,7 +35,7 @@ It connects to a dedicated **AWS MCP Server**, identifies high-risk misconfigura
 
 ## 🏗️ Architecture
 
-Sentinel uses a decoupled architecture where the Agent communicates with AWS tools strictly through the **MCP Protocol**. This ensures the AI reasoning layer is isolated from direct API implementation details.
+Guardian uses a decoupled architecture where the Agent communicates with AWS tools strictly through the **MCP Protocol**. This ensures the AI reasoning layer is isolated from direct API implementation details.
 
 ```mermaid
 graph TD
