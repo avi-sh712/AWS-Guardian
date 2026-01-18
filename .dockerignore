@@ -1,0 +1,32 @@
+# --- Virtual Environments (CRITICAL to ignore) ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Security ---
+.env
+.env.local
+.aws/
+secrets.json
+
+# --- Git History ---
+.git/
+.gitignore
+
+# --- Python Cache & Logs ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.pytest_cache/
+.coverage
+
+# --- Docker ---
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# --- OS Junk ---
+.DS_Store
+Thumbs.db
