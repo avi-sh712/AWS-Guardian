@@ -1,57 +1,48 @@
-# AWS Sentinel Agent 🛡️
-<img width="1773" height="575" alt="image" src="https://github.com/user-attachments/assets/6cc501de-bb0f-490e-afb9-3f0d72a013ad" />
-<img width="1778" height="624" alt="image" src="https://github.com/user-attachments/assets/98b29e45-699d-4a31-8304-72db119583f7" />
+# 🛡️ Sentinel: Autonomous Cloud Security Agent
 
-A secure, autonomous agent that audits AWS infrastructure for security misconfigurations. It features a **Human-in-the-Loop (HITL)** approval workflow to prevent unauthorized changes and uses the **Model Context Protocol (MCP)** to standardize tool execution.
+> **An intelligent, human-in-the-loop AI agent that audits, detects, and actively remediates AWS cloud security vulnerabilities.**
 
-## 🚀 Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Powered by LangGraph](https://img.shields.io/badge/LangGraph-Agentic-orange)](https://langchain-ai.github.io/langgraph/)
 
-* **Automated Scanning**: Detects public S3 buckets and idle EC2 instances using native AWS APIs (Boto3).
-* **Intelligent Analysis**: Uses LLM reasoning (GPT-4o) to distinguish between false positives and actual risks.
-* **Human-in-the-Loop**: Includes a Gradio dashboard that requires user approval before applying any remediation fixes.
-* **MCP Integration**: Implements a custom Model Context Protocol (MCP) server to handle AWS tool execution.
-* **State Management**: Built with LangGraph to maintain conversation state and handle interrupts during the approval process.
+---
 
-## 🛠️ Tech Stack
+## 🎥 Demo
+**[Watch the 60-Second Walkthrough Video Here]** *(Add your Loom link here)*
 
-* **Language**: Python 3.12
-* **Orchestration**: LangGraph
-* **AI Model**: OpenAI GPT-4o-mini
-* **Protocol**: Model Context Protocol (MCP)
-* **Infrastructure**: AWS SDK (Boto3)
-* **Interface**: Gradio
+![Dashboard Screenshot](https://via.placeholder.com/800x400?text=Sentinel+Dashboard+Preview)
+*(The agent detecting a public S3 bucket and requesting permission to fix it.)*
 
-## 📋 Prerequisites
+---
 
-* Python 3.12 or higher
-* An AWS Account with valid credentials
-* OpenAI API Key
+## 🚀 Overview
 
-## ⚙️ Installation
+Sentinel is not just a monitoring dashboard—it is an **Agentic System**. Unlike traditional tools that merely log errors, Sentinel uses **Large Language Models (GPT-4o)** to reason about security findings and take action.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/yourusername/sentinel-agent.git](https://github.com/yourusername/sentinel-agent.git)
-    cd sentinel-agent
-    ```
+It connects directly to your AWS environment, identifies high-risk misconfigurations (e.g., Public S3 Buckets, Unused EC2 Instances), and engages in a **Human-in-the-Loop** workflow to fix them.
 
-2.  **Install dependencies (using uv):**
-    ```bash
-    uv pip install -r requirements.txt
-    ```
-    *(Alternatively, you can use standard pip: `pip install -r requirements.txt`)*
+### **Key Capabilities**
+* **🔍 Autonomous Scanning:** proactively audits AWS S3, IAM, and EC2 resources.
+* **🧠 Intelligent Reasoning:** Uses LangGraph to determine if a configuration is a feature or a bug.
+* **🛡️ Active Remediation:** Can fix vulnerabilities (e.g., `BlockPublicAccess`) upon user approval.
+* **💬 Natural Language Interface:** Chat with your cloud infrastructure to ask questions like *"Why is my bill high?"*
 
-3.  **Configure Environment Variables:**
-    Create a `.env` file in the root directory:
-    ```bash
-    # .env
-    OPENAI_API_KEY=sk-proj-your-key...
-    AWS_ACCESS_KEY_ID=AKIA...
-    AWS_SECRET_ACCESS_KEY=...
-    AWS_REGION=us-east-1
-    ```
+---
 
-## 🖥️ Usage
+## 🏗️ Architecture
 
-1.  **Start the Dashboard:**
-    ```bash
+Sentinel is built on a modern, containerized AI stack designed for security and scalability.
+
+```mermaid
+graph TD
+    User[User via Web UI] <-->|Gradio| Frontend
+    Frontend <-->|API| Agent[LangGraph Agent]
+    Agent <-->|Reasoning| LLM[OpenAI GPT-4o]
+    Agent <-->|Boto3| AWS[AWS Cloud Environment]
+    
+    subgraph "Docker Container"
+        Frontend
+        Agent
+    end
