@@ -9,10 +9,6 @@
 [![MCP Ready](https://img.shields.io/badge/MCP-Protocol-green)](https://modelcontextprotocol.io/)
 
 ---
-image.png
-image.png
-image.png
-image.png
 
 ## 🎥 Demo
 **[Watch the 60-Second Walkthrough Video Here]** *(Add your Loom link here)*
